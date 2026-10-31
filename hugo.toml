@@ -1,0 +1,13 @@
+baseURL = 'https://dream0627.xyz/'
+locale = 'zh-CN'
+title = 'Dream'
+theme = 'reimu'
+
+[module]
+  [module.hugoVersion]
+    extended = true
+    min = "0.158.0"
+
+  [markup.highlight]
+  guessSyntax = true
+  noClasses = false
