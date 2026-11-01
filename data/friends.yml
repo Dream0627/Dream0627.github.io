@@ -4,3 +4,10 @@
   image: https://d-sketon.github.io/avatar/avatar.webp
   badge: Astro
   remark: 一个可爱的 Astro 主题
+
+- name: 白糖的记事本
+  url: https://blog.sugarmgp.cn/
+  desc: 白糖撒一地
+  image: "/images/SugarMGP.jpg"
+  badge: SugarMGP
+  remark: 白糖的记事本
