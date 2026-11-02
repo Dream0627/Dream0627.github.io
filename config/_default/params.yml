@@ -1,13 +1,13 @@
 ########################################
-# Basic Configuration
+# 基础配置
 ########################################
 
-# main menu navigation
-# for more icon information, please visit https://github.com/D-Sketon/hexo-theme-reimu/issues/30
+# 主菜单导航
+# 更多图标信息请参考 https://github.com/D-Sketon/hexo-theme-reimu/issues/30
 menu:
   - name: home
     url: ""
-    icon: # default use taichi icon, you can use a hexadecimal representation of fontawesome or icon_font, like 'f0c1'
+    icon: # 默认使用太极图标，也可以填 fontawesome 或 icon_font 的十六进制编码，如 'f0c1'
   - name: archives
     url: "archives"
     icon:
@@ -18,13 +18,13 @@ menu:
     url: "friend"
     icon:
 
-# friend links
+# 友链
 friends:
-  shuffle: false  # whether to shuffle the friend links
+  shuffle: false  # 是否随机打乱友链顺序
 
 mainSections: ["post"]
 # 年，月，日及时间的格式化样式
-# Format style for year,month,date & time
+# 使用 Go 的时间格式化写法
 yearFormat: "2006"
 monthFormat: "2006-01"
 dateFormat: "2006-01-02"
@@ -38,10 +38,10 @@ subtitle:
   typing:
     enable: false
     strings:
-      # - Sentence 1
-      # - Sentence 2
-      # - Sentence 3
-      # - Sentence 4
+      # - 句子 1
+      # - 句子 2
+      # - 句子 3
+      # - 句子 4
     typeSpeed: 100              # 打字速度（毫秒/字符） 
     backSpeed: 50               # 删除速度（毫秒/字符）
     backDelay: 2000             # 打完一句话后，等待时间
@@ -54,10 +54,10 @@ subtitle:
   text: "好困..."        # 当 typing.enable = false 时使用
 
 banner: "images/2.jpg"
-# You can also write it in the form of the following url
+# 也可以直接写成一个 URL
 # banner: "https://example.com"
 
-# If you want to use the srcset attribute, please enable it
+# 如需使用 srcset 属性（按屏幕宽度加载不同图片），请启用此项
 banner_srcset:
   enable: false
   srcset:
@@ -70,16 +70,16 @@ banner_srcset:
 
 avatar: "avatar.webp"
 
-# Control the display of the post cover
-# If not set, the banner image will be displayed by default
-# Its priority is lower than the cover in the Front-matter
+# 控制文章封面的显示
+# 未设置时默认显示 banner 图
+# 优先级低于文章 Front-matter 中的 cover
 cover: # https://example.com / false / rgb(255,117,117)
 
-# Control the display of the post toc
-# Its priority is lower than the toc in the Front-matter
+# 控制文章目录（TOC）的显示
+# 优先级低于文章 Front-matter 中的 toc
 toc: true
 
-# Open Graph
+# Open Graph 社交分享信息
 open_graph:
   enable: true
   options:
@@ -91,14 +91,14 @@ open_graph:
     #fb_admins: <fb:admin_id>
     #fb_app_id: <fb:app_id>
 
-# Content
+# 内容
 excerpt_link: Read More
 
-# Footer copyright
-# Inject code snippet right in the footer copyright
-# Make sure your code snippet is safeHTML
+# 页脚版权信息
+# 可在页脚版权处注入代码片段
+# 请确保代码片段是 safeHTML
 copyright:
-# Need help choosing? Please see...
+# 需要帮助选择协议？请看：
 # https://creativecommons.org/choose/
 # https://choosealicense.com/
 # copyright: |-
@@ -106,22 +106,22 @@ copyright:
 #   All website licensed under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a></div>
 
 footer:
-  since: 2020 # 2020-current year
+  since: 2020 # 2020 到当前年份
   powered: true
   count: true
   busuanzi: true
   icon:
-    url: "../images/taichi.png" # this path is relative to the css/main.css, so it needs to go up one level to reach the images folder
+    url: "../images/taichi.png" # 此路径相对于 css/main.css，需要用 ../ 回到 images 目录
     rotate: true
-    mask: true # whether to use the images as a mask
+    mask: true # 是否将图片作为遮罩
 
-# Sidebar
-# sidebar: right # deprecated, use sidebar.position instead
+# 侧边栏
+# sidebar: right # 已废弃，请改用 sidebar.position
 sidebar:
   position: left
-  menu: true  # whether to show the sidebar menu button, ignored on mobile devices
+  menu: true  # 是否显示侧边栏菜单按钮（移动端忽略）
   article:
-    show_common: true # whether to show common sidebar, ignored on mobile devices
+    show_common: true # 是否显示通用侧边栏（移动端忽略）
 
 social:
   # email: mailto:xxx@gmail.com
@@ -160,84 +160,84 @@ widgets:
   - tagcloud
   - recent_posts
 
-# Widget behavior
+# 小部件行为
 category_limits: 10
 tag_limits: 10
 recent_posts_limits: 5
 tagcloud_limits: 20
 
-# Archive behavior
-only_show_capsule_in_index: false # If you have hugo amounts of tags and categories, you can set this to true to only show the capsule in the index page for better performance
-uppercase_capsule: true # If you want to keep taxonomic capsule unchanged, please set this to false
+# 归档行为
+only_show_capsule_in_index: false # 标签/分类很多时可设为 true，仅在首页显示胶囊标签以提升性能
+uppercase_capsule: true # 想保持分类/标签胶囊原样显示请设为 false
 
-show_update_time: false # If you want to show the update time, please set this to true
+show_update_time: false # 是否显示文章更新时间
 
-# Summary content
+# 摘要内容
 summary:
   enable: false
-  style: 'subtitle' # 'subtitle' or 'blockquote'
+  style: 'subtitle' # 'subtitle' 或 'blockquote'
 
-# RSS output
+# RSS 输出
 rss:
-  limit: 10             # The number of recent articles to be output, write -1 to output all
-  showFullContent: false # output full content or description
-  showCopyright: false   # If true, add copyright to the end of article.
+  limit: 10             # 输出的最近文章数量，填 -1 表示输出全部
+  showFullContent: false # 输出全文还是摘要
+  showCopyright: false   # 为 true 时在文章末尾附加版权信息
 
-# Sort order configuration
-# Available values: default, date, date-reverse, weight, weight-reverse
-# default: hugo's default sort order for page collections, see https://gohugo.io/quick-reference/page-collections/#sort
-# date: sorted by date in ascending order (oldest first)
-# date-reverse: sorted by date in descending order (newest first)
-# weight: sorted by weight in ascending order
-# weight-reverse: sorted by weight in descending order
+# 排序方式配置
+# 可选值：default、date、date-reverse、weight、weight-reverse
+# default：Hugo 对页面集合的默认排序，见 https://gohugo.io/quick-reference/page-collections/#sort
+# date：按日期升序（最早的在前面）
+# date-reverse：按日期降序（最新的在前面）
+# weight：按权重升序
+# weight-reverse：按权重降序
 sort_order:
   taxonomy:
-    category: date-reverse # controlled by categories_weight
-    tag: date-reverse # controlled by tags_weight
-  archive: date-reverse # controlled by weight
-  home: default # controlled by weight
+    category: date-reverse # 受 categories_weight 参数控制
+    tag: date-reverse # 受 tags_weight 参数控制
+  archive: date-reverse # 受 weight 参数控制
+  home: default # 受 weight 参数控制
 
-# Pagination
+# 分页
 paginate:
-  archive: # Number of posts per page in archive and taxonomy pages
-  post: # Number of posts per page in home and other list pages
+  archive: # 归档页和分类/标签页每页的文章数
+  post: # 首页及其他列表页每页的文章数
 
 ########################################
-# CSS
+# CSS 样式
 ########################################
 
 layout:
-  max_width: 1350px # the max width of the main content area
+  max_width: 1350px # 主内容区最大宽度
 
 triangle_badge:
   enable: false
-  icon: github # same as the icon in the social config
+  icon: github # 与 social 配置中的图标相同
   link: https://github.com/D-Sketon/hugo-theme-reimu
 
-anchor_icon: # default use '#' icon, you can use a hexadecimal representation of fontawesome or icon_font, like 'f0c1', you can also use false to hide anchor icon
+anchor_icon: # 默认使用 '#' 图标，也可以填 fontawesome 或 icon_font 的十六进制编码（如 'f0c1'），设为 false 可隐藏锚点图标
 
 reimu_cursor:
   enable: true
   cursor:
-    default: ../images/cursor/reimu-cursor-default.png  # this path is relative to the css/main.css, so it needs to go up one level to reach the images folder
+    default: ../images/cursor/reimu-cursor-default.png  # 此路径相对于 css/main.css，需要用 ../ 回到 images 目录
     pointer: ../images/cursor/reimu-cursor-pointer.png
     text: ../images/cursor/reimu-cursor-text.png
 
 icon_font: 4552607_ex15nbittbh
 
-# Font loading strategy
-# Custom Font -> Google Fonts -> Local FallBack Font
+# 字体加载顺序
+# 自定义字体 -> Google 字体 -> 本地回退字体
 
-# Custom Font
+# 自定义字体
 custom_font:
   enable: false
   article:
-    # - css: https://fontsapi.zeoseven.com/292/main/result.css # font css
-    #   name: LXGW WenKai # font name
+    # - css: https://fontsapi.zeoseven.com/292/main/result.css # 字体 CSS
+    #   name: LXGW WenKai # 字体名称
   code:
 
 # https://fonts.google.com/
-# Google Fonts, higher priority than local_font
+# Google 字体，优先级高于 local_font
 font:
   enable: true
   article:
@@ -248,7 +248,7 @@ font:
     # - Source Code Pro
     # - JetBrains Mono
 
-# Local FallBack Font
+# 本地回退字体
 local_font:
   article:
     - "-apple-system"
@@ -262,16 +262,16 @@ local_font:
     - monospace
 
 dark_mode:
-  # true means that the dark mode toggle button is shown
-  # false means that the dark mode toggle button is hidden
+  # true 表示显示深色模式切换按钮
+  # false 表示隐藏深色模式切换按钮
   button: true # true | false
-  # true means that the dark mode is enabled by default
-  # false means that the dark mode is disabled by default
-  # auto means that the dark mode is automatically switched according to the system settings
+  # true 表示默认开启深色模式
+  # false 表示默认关闭深色模式
+  # auto 表示跟随系统设置自动切换
   type: auto # true | false | auto
 
 ########################################
-# Analytics
+# 访问统计
 ########################################
 
 baidu_analytics: false
@@ -279,21 +279,21 @@ google_analytics: false
 clarity: false
 
 ########################################
-# Markdown Display
+# Markdown 显示
 ########################################
 
-# mermaid url https://github.com/mermaid-js/mermaid
+# mermaid 地址 https://github.com/mermaid-js/mermaid
 mermaid:
-  zoom: false # whether to enable zoom for mermaid diagrams
+  zoom: false # 是否为 mermaid 图表启用缩放
 
 code_block:
-  # whether to expand the code block by default
-  # true means expand all code blocks by default
-  # false means collapse all code blocks by default
-  # number means collapse the code block by default when the number of lines exceeds the specified value
+  # 代码块默认是否展开
+  # true 表示默认展开所有代码块
+  # false 表示默认折叠所有代码块
+  # 填数字表示代码行数超过该值时默认折叠
   expand: true
 
-# Clipboard configuration
+# 复制配置
 clipboard:
   success: 
     en: Copy successfully (*^▽^*)
@@ -309,16 +309,16 @@ clipboard:
     pt-BR: Falha ao copiar (ﾟ⊿ﾟ)ﾂ
   copyright:
     enable: false
-    count: 50 # The number of characters when the copyright is displayed
-    license_type: by-nc-sa # https://creativecommons.org/licenses
+    count: 50 # 显示版权信息时的字符数
+    license_type: by-nc-sa # 许可证类型，见 https://creativecommons.org/licenses
 
 math:
   katex:
     enable: true
   mathjax:
     enable: false
-    options: # see https://docs.mathjax.org/en/latest/web/configuration.html
-    # we need to put the configuration in an array, because hugo will automatically convert the key to lowercase
+    options: # 参见 https://docs.mathjax.org/en/latest/web/configuration.html
+    # 配置必须放在数组里，因为 Hugo 会自动把 key 转成小写
       [
         {
           tex:
@@ -343,66 +343,66 @@ math:
         },
       ]
 
-# Paragraph anchor
-# Injects linkable anchor icons into paragraphs and list items in article body
-# Usage: write {#anchor-xxx} in Markdown; the matching element gets id="anchor-xxx" and an anchor icon
+# 段落锚点
+# 在正文的段落和列表项中注入可链接的锚点图标
+# 用法：在 Markdown 中写 {#anchor-xxx}，对应元素会获得 id="anchor-xxx" 和锚点图标
 anchor:
-  # Explicit anchors
+  # 显式锚点
   explicit:
-    # Whether to enable explicit anchors: parse {#anchor-xxx} syntax in Markdown (default false)
+    # 是否启用显式锚点：解析 Markdown 中的 {#anchor-xxx} 语法（默认 false）
     enable: false
-    # Anchor placeholder: the pattern used to match explicit anchors (no need to change unless it conflicts with article content)
+    # 锚点标记：用于匹配显式锚点（除非与文章内容冲突，否则无需修改）
     marker: "{#anchor-"
-    # Anchor id prefix: generated id = prefix + the xxx part inside the marker (default "anchor-")
+    # 锚点 id 前缀：生成的 id = 前缀 + 标记里的 xxx 部分（默认 "anchor-"）
     prefix: "anchor-"
-  # Auto anchors
+  # 自动锚点
   auto:
-    # Whether to enable auto anchors: automatically generate ids for direct child paragraphs, derived from text content (default false)
+    # 是否启用自动锚点：根据文本内容为直接子段落自动生成 id（默认 false）
     enable: false
-    # Maximum length of auto-generated anchor ids; longer ids will be truncated (only effective when auto.enable = true)
+    # 自动生成锚点 id 的最大长度，超出会被截断（仅 auto.enable = true 时生效）
     length: 60
 
 ########################################
-# Comment system
+# 评论系统
 ########################################
 
-# global control of the comment system
-# you can use multiple comment systems at the same time
-# load order: localStorage(user manually selects) -> default
+# 评论系统的全局开关
+# 可以同时启用多个评论系统
+# 加载顺序：localStorage（用户手动选择）-> default
 # -> valine -> waline -> twikoo -> gitalk -> giscus -> utterances -> beaudar -> disqus
 comment:
-  # comment system title
+  # 评论系统标题
   title:
     en: Leave a comment
     zh-CN: 说些什么吧！
     zh-TW: 說些什麼吧！
     ja: コメントを残す
     pt-BR: Deixe um comentário
-  default: waline # default comment system, when you enable multiple comment systems
+  default: waline # 默认评论系统（启用多个评论系统时生效）
 
-# valine comment system. https://valine.js.org
-# version 1.5.1
-# notify and verify have been deprecated
+# valine 评论系统，https://valine.js.org
+# 版本 1.5.1
+# notify 和 verify 已废弃
 valine:
-  enable: false # if you want to use valine,please set this value is true
-  appId: # leancloud application app id
-  appKey: # leancloud application app key
-  pageSize: 10 # comment list page size
-  avatar: mp # gravatar style https://valine.js.org/#/avatar
-  # lang: zh-cn # deprecated, use html.lang instead
-  placeholder: Just go go # valine comment input placeholder(like: Please leave your footprints )
-  guest_info: nick,mail,link #valine comment header info
-  recordIP: true # whether to record the IP address of the commenters
-  highlight: true # whether to highlight the code blocks
-  visitor: false # whether to display the number of visitors
-  serverURLs: # leancloud server url
+  enable: false # 要使用 valine 请设为 true
+  appId: # LeanCloud 应用的 App ID
+  appKey: # LeanCloud 应用的 App Key
+  pageSize: 10 # 评论列表每页数量
+  avatar: mp # 头像风格，见 https://valine.js.org/#/avatar
+  # lang: zh-cn # 已废弃，请改用 html.lang
+  placeholder: Just go go # 评论框占位提示文字（例如：Please leave your footprints）
+  guest_info: nick,mail,link # 评论者信息字段
+  recordIP: true # 是否记录评论者 IP 地址
+  highlight: true # 是否高亮代码块
+  visitor: false # 是否显示访问量
+  serverURLs: # LeanCloud 服务器地址
 
 # https://waline.js.org/
 waline:
   enable: false
   serverURL:
-  # lang: zh-CN # deprecated, use html.lang instead
-  locale: {} # https://waline.js.org/guide/features/i18n.html#%E8%87%AA%E5%AE%9A%E4%B9%89%E8%AF%AD%E8%A8%80
+  # lang: zh-CN # 已废弃，请改用 html.lang
+  locale: {} # 自定义语言，见 https://waline.js.org/guide/features/i18n.html#%E8%87%AA%E5%AE%9A%E4%B9%89%E8%AF%AD%E8%A8%80
   emoji:
     - https://unpkg.com/@waline/emojis@1.2.0/weibo
     - https://unpkg.com/@waline/emojis@1.2.0/alus
@@ -456,32 +456,32 @@ giscus:
 # https://disqus.com
 disqus:
   enable: false
-  shortname: # your disqus shortname
+  shortname: # 你的 disqus shortname
   count: true
 
 # https://utteranc.es
 utterances:
   enable: false
-  repo: owner/repo # Change this to "Your GitHub Username/The Repository Name" used for storing blog comments
+  repo: owner/repo # 改成 "你的 GitHub 用户名/仓库名"，用于存放博客评论
   issue_term: title
-  theme: auto # auto means to automatically adapt to dark and light themes, you can also use specific themes like github-light, github-dark, preferred-color-scheme, etc.
+  theme: auto # auto 表示自动适配明暗主题，也可指定 github-light、github-dark、preferred-color-scheme 等具体主题
 
 # https://beaudar.lipk.org/
 beaudar:
   enable: false
-  repo: owner/repo # Change this to "Your GitHub Username/The Repository Name" used for storing blog comments
-  branch: main # The branch name, default is main
-  issue_term: title # The term to be used to create issues for comments, support pathname, url, title, og:title
+  repo: owner/repo # 改成 "你的 GitHub 用户名/仓库名"，用于存放博客评论
+  branch: main # 分支名，默认为 main
+  issue_term: title # 用于创建评论 issue 的匹配项，支持 pathname、url、title、og:title
   issue_number:
-  theme: auto # auto means to automatically adapt to dark and light themes, you can also use specific themes like github-light, github-dark, preferred-color-scheme, etc.
+  theme: auto # auto 表示自动适配明暗主题，也可指定 github-light、github-dark、preferred-color-scheme 等具体主题
   label:
-  input_position: top # top/bottom, comment input position, default is top
-  comment_order: desc # asc/desc, comment order, asc displays the oldest comments first, while desc displays the newest comments first. The default is desc
-  keep_theme: # true/false, save the theme settings to sessionStorage, default is true
-  loading: # true/false, jump to official website when clicking the loading icon, default is true
+  input_position: top # top/bottom，评论框位置，默认 top
+  comment_order: desc # asc/desc，评论排序，asc 最早在前，desc 最新在前，默认 desc
+  keep_theme: # true/false，是否把主题设置保存到 sessionStorage，默认 true
+  loading: # true/false，点击加载图标时是否跳转到官网，默认 true
 
 ########################################
-# Search
+# 搜索
 ########################################
 
 algolia_search:
@@ -493,7 +493,7 @@ algolia_search:
     per_page: 10
 
 ########################################
-# Animation
+# 动画
 ########################################
 
 preloader:
@@ -504,10 +504,10 @@ preloader:
     en: Loading...
     ja: Loading...
     pt-BR: Carregando...
-  icon: # default use inline svg for fast speed, you can use a image url, like '/images/taichi.png'
-  rotate: true # whether to rotate the icon
+  icon: # 默认使用内联 SVG 以提升速度，也可以填图片 URL，如 '/images/taichi.png'
+  rotate: true # 是否旋转图标
 
-# see https://github.com/D-Sketon/aos.js
+# 参见 https://github.com/D-Sketon/aos.js
 animation:
   enable: true
   options:
@@ -533,7 +533,7 @@ animation:
       section: fade-up
       nav: fade-up
 
-# see https://github.com/D-Sketon/mouse-firework
+# 参见 https://github.com/D-Sketon/mouse-firework
 firework:
   enable: true
   disable_on_mobile: false
@@ -561,10 +561,10 @@ firework:
           lineWidth: 6
 
 ########################################
-# Extended features
+# 扩展功能
 ########################################
 
-# show the copyright below each article
+# 在每篇文章下方显示版权信息
 article_copyright:
   enable: false
   content:
@@ -574,21 +574,21 @@ article_copyright:
     date: false
     updated: false
     license: true
-    license_type: by-nc-sa # https://creativecommons.org/licenses
+    license_type: by-nc-sa # 许可证类型，见 https://creativecommons.org/licenses
 
-# Back To Top
+# 返回顶部
 top:
   enable: true
-  position: right # left or right
+  position: right # left 或 right
   icon:
-    url: "../images/taichi.png" # this path is relative to the css/main.css, so it needs to go up one level to reach the images folder
+    url: "../images/taichi.png" # 此路径相对于 css/main.css，需要用 ../ 回到 images 目录
     rotate: true
-    mask: true # whether to use the images as a mask
+    mask: true # 是否将图片作为遮罩
 
-# whether to display the notification when the article is outdated
+# 文章过期时是否显示提示
 outdate:
   enable: false
-  daysAgo: 180 # The number of days after which the article is considered outdated
+  daysAgo: 180 # 文章超过多少天后视为过期
   message:
     en: This article was last updated on {time}. Please note that the content may no longer be applicable.
     zh-CN: 本文最后更新于 {time}，请注意文中内容可能已不适用。
@@ -606,7 +606,7 @@ icp:
 moe_icp:
   icpnumber: # 萌国ICP备案号
 
-# Sponsor
+# 赞助
 sponsor:
   enable: false
   tip: 
@@ -616,16 +616,16 @@ sponsor:
     ja: コーヒーを買ってください
     pt-BR: Compre-me um café
   icon:
-    url: "../images/taichi.png" # this path is relative to the css/main.css, so it needs to go up one level to reach the images folder
+    url: "../images/taichi.png" # 此路径相对于 css/main.css，需要用 ../ 回到 images 目录
     rotate: true
-    mask: true # whether to use the images as a mask
+    mask: true # 是否将图片作为遮罩
   qr:
     # - name: 支付宝
     #   src: "sponsor/alipay.jpg"
     # - name: 微信
     #   src: "sponsor/wechat.png"
 
-# Share
+# 分享
 share:
   # - facebook
   # - twitter
@@ -636,70 +636,70 @@ share:
   # - qq
   # - weixin
 
-# show categories card on home page
+# 在首页显示分类卡片
 home_categories:
   enable: false
   content:
-    - categories: # string (single-layer category) or array (multi-layer category)
-      cover: # empty means random cover
+    - categories: # 字符串（单层分类）或数组（多层分类）
+      cover: # 留空表示随机封面
     - categories:
       cover:
 
 ########################################
-# Experimental features
+# 实验性功能
 ########################################
 
-# Inject code snippet
-# Make sure your code snippet is safeHTML
+# 注入代码片段
+# 请确保代码片段是 safeHTML
 injector:
-  head_begin: # Inject code snippet right after <head>
-  head_end: # Inject code snippet right before </head>
-  body_begin: # Inject code snippet right after <body>
-  body_end: # Inject code snippet right before </body>
-  sidebar_begin: # Inject code snippet right after <aside>
-  sidebar_end: # Inject code snippet right before </aside>
+  head_begin: # 在 <head> 之后注入代码片段
+  head_end: # 在 </head> 之前注入代码片段
+  body_begin: # 在 <body> 之后注入代码片段
+  body_end: # 在 </body> 之前注入代码片段
+  sidebar_begin: # 在 <aside> 之后注入代码片段
+  sidebar_end: # 在 </aside> 之前注入代码片段
 
-# Experimental, may have a lot of bugs, open with caution!
+# 实验性功能，可能存在较多 bug，请谨慎开启！
 pjax:
   enable: false
 
-# Experimental
-# https://github.com/GoogleChromeLabs/quicklink
+# 实验性功能
+# 参见 https://github.com/GoogleChromeLabs/quicklink
 quicklink:
   enable: false
-  # The `requestIdleCallback` timeout, in milliseconds.
+  # requestIdleCallback 的超时时间（毫秒）
   timeout: 3000
-  # Whether or not the URLs within the options.el container should be treated as high priority.
-  # When true, quicklink will attempt to use the fetch() API if supported (rather than link[rel=prefetch]).
+  # options.el 容器内的 URL 是否按高优先级处理
+  # 为 true 时 quicklink 会在支持的情况下使用 fetch() API（而不是 link[rel=prefetch]）
   priority: true
-  # Determine if a URL should be prefetched.
-  # Only support string
+  # 判断某个 URL 是否需要预取
+  # 仅支持字符串
   ignores: []
 
-# Experimental
+# 实验性功能
 service_worker:
   enable: false
 
-# Experimental
+# 实验性功能
 live2d:
   enable: false
-  position: left # left or right
+  position: left # left 或 right
 
-# Experimental
+# 实验性功能
 live2d_widgets:
   enable: false
-  position: left # left or right
+  position: left # left 或 right
 
 # https://github.com/CodeByZach/pace
 pace:
   enable: true
 
-# Experimental
-# Please turn on pjax to use this feature
+# 实验性功能
+# 请先开启 pjax 才能使用此功能
 player:
   disable_on_mobile: false
   position: before_sidebar # before_sidebar | after_sidebar | after_widget
-  # if you enable meting, you must enable aplayer first
+  # 如果要启用 meting，必须先启用 aplayer
   aplayer:
     # https://github.com/DIYgod/APlayer
     enable: false
@@ -716,9 +716,9 @@ player:
       lrcType:
   meting:
     # https://github.com/metowolf/MetingJS
-    # if you want to use meting, please enable aplayer first
+    # 要使用 meting 请先启用 aplayer
     enable: false
-    meting_api: # custom api
+    meting_api: # 自定义 API
     options:
       id: 2265921590
       server: netease
@@ -730,20 +730,20 @@ player:
 ########################################
 
 pangu:
-  # more information: https://github.com/vinta/pangu.js 
-  enable: false  # enable pangu.js to add space between Chinese and English
+  # 更多信息：https://github.com/vinta/pangu.js 
+  enable: false  # 启用 pangu.js 自动在中英文之间加空格
 
 ########################################
-# Theme
+# 主题
 ########################################
 
-# experimental, may have a lot of bugs, open with caution!
-# A dynamic color generation tool based on Google's Material You design guidelines, capable of extracting primary colors from any image and generating complete light and dark color schemes.
+# 实验性功能，可能存在较多 bug，请谨慎开启！
+# 基于 Google Material You 设计规范的动态取色工具，可从任意图片提取主色并生成完整的明暗配色方案。
 material_theme:
-  # more information: https://github.com/2061360308/material-theme
-  # notice: when you enable this feature, all the covers will be automatically added "crossorigin" attribute to support the dynamic color scheme
-  # so make sure your custom covers will not be blocked by the browser's CORS policy
-  enable: true # enable material_theme to generate dynamic color schemes based on the banner image
+  # 更多信息：https://github.com/2061360308/material-theme
+  # 注意：启用后所有封面会自动添加 "crossorigin" 属性以支持动态配色
+  # 因此请确保自定义封面不会被浏览器的 CORS 策略拦截
+  enable: true # 启用 material_theme，根据 banner 图生成动态配色方案
 
 internal_theme:
   light:

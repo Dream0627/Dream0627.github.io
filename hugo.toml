@@ -8,6 +8,15 @@ theme = 'reimu'
     extended = true
     min = "0.158.0"
 
+  # 让 static/images 同时作为 assets 资源可读，供加载页从 banner 取色
+  [[module.mounts]]
+    source = 'assets'
+    target = 'assets'
+
+  [[module.mounts]]
+    source = 'static/images'
+    target = 'assets/images'
+
   [markup.highlight]
   guessSyntax = true
   noClasses = false

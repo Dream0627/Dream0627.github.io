@@ -101,7 +101,7 @@
         >
       </div>
     {{- end -}}
-    {{- if .Site.Params.footer.busuanzi -}}
+    {{- if and .Site.Params.footer.busuanzi (not hugo.IsServer) -}}
       <div>
         <span class="icon-eye"></span>
         <span id="busuanzi_container_site_pv"

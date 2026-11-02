@@ -369,7 +369,7 @@
   </script>
 {{- end -}}
 
-{{- if $params.footer.busuanzi -}}
+{{- if and $params.footer.busuanzi (not hugo.IsServer) -}}
   {{- partial "helpers/cdnJs.html" (dict "name" "busuanzi" "ctx" . "async" true) -}}
 {{- end -}}
 
